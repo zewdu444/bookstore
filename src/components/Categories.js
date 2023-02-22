@@ -1,9 +1,11 @@
-import React from 'react'
+import React from 'react';
 
 function Categories() {
   return (
-    <div>Categories</div>
-  )
+    <div>
+      <button type="button">Check status</button>
+    </div>
+  );
 }
 
-export default Categories
+export default Categories;
