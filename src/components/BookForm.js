@@ -12,7 +12,7 @@ function BookForm() {
           Author
           <input type="text" />
         </label>
-        <input type="submit" value="ADD BOOK"  />
+        <input type="submit" value="ADD BOOK" />
       </form>
     </div>
   );

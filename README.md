@@ -2,7 +2,7 @@
 
 <div align="center">
 
-  <h3><b>Book store</b></h3>
+  <h3><b>Book Store</b></h3>
 
 </div>
 
@@ -26,24 +26,22 @@
 - [🙏 Acknowledgements](#acknowledgements)
 - [📝 License](#license)
 
-# 📖 Book store CMS <a name="about-project"></a>
+# 📖 Book Store CMS <a name="about-project"></a>
 
 <p> this repository is React Redux single page application used to create, remove and display books.</p>
 
 ## 🛠 Built With <a name="built-with"> </a>
 
-> HTML 5 , css3, javascript ES6, and React
+> HTML 5 , css3, javascript ES6, React and Redux
 
 ### Tech Stack <a name="tech-stack"></a>
 
-> React, webpack And babel
+> React, Redux, webpack And babel
 
 ### Key Features <a name="key-features"></a>
 
- <li>Setup react project folder</li>
-  <li>Calculator Layout</li>
-  <li>Basic functionality</li>
-   <li>Navigation add for home, calcualtor and about page</li>
+  <li>Display books</li>
+  <li>Navigation to different pages</li>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p><!-- LIVE DEMO -->
 
@@ -57,14 +55,14 @@
 
 to run on your localhost clone the project to local folder
 
-> <p>cd Math_magicians</p>
+> <p>cd bookstore</p>
 > <p>npm i</p>
 > <p> npm start<p>
 
 ### Setup
 
-> <p> git clone https://github.com/zewdu444/math_magicians.git</p>
-> cd math_magicians
+> <p> git clone https://github.com/zewdu444/bookstore.git</p>
+> cd bookstore
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -98,13 +96,13 @@ To run the project, execute the following command:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-> Add Test functionalites
+> Add Redux libraries
 
 ## 🤝 Contributing <a name="contributing"></a>
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/zewdu444/math_magicians/issues).
+Feel free to check the [issues page](https://github.com/zewdu444/bookstore/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
