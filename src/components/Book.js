@@ -1,4 +1,5 @@
 import React from 'react';
+import BookForm from './BookForm';
 
 function Book({ books }) {
   const booklist = books.length ? (
@@ -21,6 +22,7 @@ function Book({ books }) {
 
   return (
     <div>
+      <BookForm />
       {booklist}
     </div>
   );
