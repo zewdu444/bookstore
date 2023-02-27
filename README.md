@@ -42,6 +42,7 @@
 
   <li>Display books</li>
   <li>Navigation to different pages</li>
+  <li>Redux toolkit</li>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p><!-- LIVE DEMO -->
 
@@ -96,7 +97,7 @@ To run the project, execute the following command:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-> Add Redux libraries
+> Use Redux in React components
 
 ## 🤝 Contributing <a name="contributing"></a>
 

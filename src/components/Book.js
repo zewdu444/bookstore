@@ -1,19 +1,30 @@
 import React from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import BookForm from './BookForm';
+import { removeBook } from '../redux/books/booksSlice';
 
-function Book({ books }) {
-  const booklist = books.length ? (
+function Book() {
+  const bookstore = useSelector((state) => state.books.bookstore);
+  const dispatch = useDispatch();
+  const booklist = bookstore.length ? (
     <ul>
       {
-      books.map((book) => (
-        <li key={book.id}>
-          {book.title}
-          <p>
-            {book.author}
-          </p>
-          <button id={book.id} type="button">Remove</button>
-        </li>
-      ))
+        bookstore.map((book) => (
+          <li key={book.id}>
+            {book.title}
+            <p>
+              {book.author}
+            </p>
+            <button
+              id={book.id}
+              onClick={() => dispatch(removeBook(book.id))}
+              type="button"
+            >
+              Remove
+
+            </button>
+          </li>
+        ))
     }
     </ul>
   ) : (
