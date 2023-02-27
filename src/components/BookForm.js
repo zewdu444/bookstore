@@ -11,6 +11,7 @@ function BookForm() {
     event.preventDefault();
     const book = { id: uuidv4(), ...title, ...author };
     dispath(addBook(book));
+    event.target.reset();
   };
   return (
     <div>
@@ -18,13 +19,18 @@ function BookForm() {
         <label htmlFor="Title">
           Title
           <input
+            required
             type="text"
             onChange={(e) => setTitle({ title: e.target.value })}
           />
         </label>
         <label htmlFor="Autor">
           Author
-          <input type="text" onChange={(e) => setAutor({ author: e.target.value })} />
+          <input
+            required
+            type="text"
+            onChange={(e) => setAutor({ author: e.target.value })}
+          />
         </label>
         <input type="submit" value="ADD BOOK" />
       </form>

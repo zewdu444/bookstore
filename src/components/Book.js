@@ -6,7 +6,6 @@ import { removeBook } from '../redux/books/booksSlice';
 function Book() {
   const bookstore = useSelector((state) => state.books.bookstore);
   const dispatch = useDispatch();
-  console.log(bookstore);
   const booklist = bookstore.length ? (
     <ul>
       {
