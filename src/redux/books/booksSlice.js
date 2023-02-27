@@ -30,7 +30,7 @@ export const booksSlice = createSlice({
     },
     removeBook: (state, action) => {
       state.bookstore.splice(state.bookstore.findIndex(
-        (book) => book.id === action.payload,
+        (book) => book.item_id === action.payload,
       ), 1);
     },
   },
