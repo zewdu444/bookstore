@@ -3,32 +3,37 @@ import { useDispatch, useSelector } from 'react-redux';
 import { addBook } from '../redux/books/booksSlice';
 
 function BookForm() {
-  const [title, setTitle] = useState({});
-  const [author, setAutor] = useState({});
-  const [category, setCategory] = useState({});
+  const [title, setTitle] = useState('');
+  const [author, setAutor] = useState('');
+  const [category, setCategory] = useState('Fiction');
   const bookstore = useSelector((state) => state.books.bookstore);
   const categories = useSelector((state) => state.category.categories);
   const dispath = useDispatch();
-  const addBookHandler = (event) => {
-    event.preventDefault();
-    const book = {
-      item_id: `item${bookstore.length + 1}`,
-      ...title,
-      ...author,
-      ...category,
-    };
-    dispath(addBook(book));
-    event.target.reset();
+  const addBookHandler = (e) => {
+    if (title !== '' && author !== '') {
+      e.preventDefault();
+      const book = {
+        item_id: `item${bookstore.length + 1}`,
+        title,
+        author,
+        category,
+      };
+      dispath(addBook(book));
+      setTitle('');
+      setAutor('');
+    }
   };
+
   return (
     <div>
-      <form onSubmit={addBookHandler}>
+      <form>
         <label htmlFor="Title">
           Title
           <input
             required
             type="text"
-            onChange={(e) => setTitle({ title: e.target.value })}
+            value={title}
+            onChange={(e) => setTitle(e.target.value)}
           />
         </label>
         <label htmlFor="Autor">
@@ -36,7 +41,8 @@ function BookForm() {
           <input
             required
             type="text"
-            onChange={(e) => setAutor({ author: e.target.value })}
+            value={author}
+            onChange={(e) => setAutor(e.target.value)}
           />
         </label>
         {' '}
@@ -44,7 +50,8 @@ function BookForm() {
           <select
             name="catagories"
             required
-            onChange={(e) => setCategory({ category: e.target.value })}
+            defaultValue="Fiction"
+            onInput={(e) => setCategory(e.target.value)}
           >
             {
               categories.map((category) => (
@@ -60,7 +67,7 @@ function BookForm() {
           </select>
         </label>
         {' '}
-        <input type="submit" value="ADD BOOK" />
+        <button type="button" onClick={addBookHandler}>ADD BOOK</button>
       </form>
       <hr />
       <br />

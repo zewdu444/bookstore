@@ -7,8 +7,8 @@ function Categories() {
   const [show, setShow] = useState(true);
   const categories = useSelector((state) => state.category.categories);
   const categoryHandler = () => {
-    dispatch(checkTheStatus());
     setShow(false);
+    dispatch(checkTheStatus());
   };
   return (
     <div>

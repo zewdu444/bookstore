@@ -14,12 +14,16 @@ export const categoriesSlice = createSlice({
       if (state.categories.length === 0) {
         return {
           ...state,
-          categories: [...state.categories, 'Under construction'],
+          categories: [...state.categories, 'Under Construction'],
         };
       }
-      return false;
+      return {
+        ...state,
+        categories: state.categories,
+      };
     },
-  },
+  }
+  ,
 
 });
 export const { checkTheStatus } = categoriesSlice.actions;
