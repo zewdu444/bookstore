@@ -62,6 +62,9 @@ function BookForm() {
         {' '}
         <input type="submit" value="ADD BOOK" />
       </form>
+      <hr />
+      <br />
+
     </div>
   );
 }

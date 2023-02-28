@@ -12,8 +12,22 @@ function Categories() {
   };
   return (
     <div>
-      <h2>{categories[0]}</h2>
       {show && <button hidden={!show} type="button" onClick={categoryHandler}>Check status</button>}
+      {
+      show ? (<p />) : (
+        <ul>
+          {
+      categories.map((category) => (
+        <li key={category.id}>
+          {category.category}
+        </li>
+      ))
+    }
+        </ul>
+      )
+
+     }
+
     </div>
   );
 }

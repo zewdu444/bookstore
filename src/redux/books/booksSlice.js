@@ -25,14 +25,14 @@ export const booksSlice = createSlice({
   name: 'books',
   initialState,
   reducers: {
-    addBook: (state, action) => {
-      state.bookstore.push(action.payload);
-    },
-    removeBook: (state, action) => {
-      state.bookstore.splice(state.bookstore.findIndex(
-        (book) => book.item_id === action.payload,
-      ), 1);
-    },
+    addBook: (state, action) => ({
+      ...state,
+      bookstore: [...state.bookstore, action.payload],
+    }),
+    removeBook: (state, action) => ({
+      ...state,
+      bookstore: state.bookstore.filter((book) => book.item_id !== action.payload),
+    }),
   },
 
 });
