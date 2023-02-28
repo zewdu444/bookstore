@@ -12,10 +12,13 @@ export const categoriesSlice = createSlice({
   reducers: {
     checkTheStatus: (state) => {
       if (state.categories.length === 0) {
-        state.categories.push('Under construction');
+        return {
+          ...state,
+          categories: [...state.categories, 'Under construction'],
+        };
       }
+      return false;
     },
-
   },
 
 });
