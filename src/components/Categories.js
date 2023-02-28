@@ -7,13 +7,27 @@ function Categories() {
   const [show, setShow] = useState(true);
   const categories = useSelector((state) => state.category.categories);
   const categoryHandler = () => {
-    dispatch(checkTheStatus());
     setShow(false);
+    dispatch(checkTheStatus());
   };
   return (
     <div>
-      <h2>{categories[0]}</h2>
       {show && <button hidden={!show} type="button" onClick={categoryHandler}>Check status</button>}
+      {
+      show ? (<p />) : (
+        <ul>
+          {
+      categories.map((category) => (
+        <li key={category.id}>
+          {category.category}
+        </li>
+      ))
+    }
+        </ul>
+      )
+
+     }
+
     </div>
   );
 }
