@@ -1,24 +1,24 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { addBook } from '../redux/books/booksSlice';
+import { v4 as uuidv4 } from 'uuid';
+import { postBooks } from '../redux/books/booksSlice';
 
 function BookForm() {
   const [title, setTitle] = useState('');
   const [author, setAutor] = useState('');
   const [category, setCategory] = useState('Fiction');
-  const bookstore = useSelector((state) => state.books.bookstore);
   const categories = useSelector((state) => state.category.categories);
-  const dispath = useDispatch();
+  const dispatch = useDispatch();
   const addBookHandler = (e) => {
     if (title !== '' && author !== '') {
       e.preventDefault();
       const book = {
-        item_id: `item${bookstore.length + 1}`,
+        item_id: `item${uuidv4()}`,
         title,
         author,
         category,
       };
-      dispath(addBook(book));
+      dispatch(postBooks(book));
       setTitle('');
       setAutor('');
     }

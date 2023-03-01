@@ -24,6 +24,7 @@
     "import/no-unresolved": "off",
     "no-shadow": "off",
     "react/prop-types": "off",
+    "no-param-reassign": 0,
     "import/no-extraneous-dependencies": [
       "error",
       {
