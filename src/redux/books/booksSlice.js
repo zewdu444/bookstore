@@ -12,8 +12,16 @@ export const fetchBooks = createAsyncThunk('books/fetchBooks', async () => {
   try {
     const response = await axios.get(BASE_URL);
     return response.data;
-  } catch (err) {
-    return err.message;
+  } catch (error) {
+    return error.message;
+  }
+});
+export const postBooks = createAsyncThunk('books/postBooks', async (initialbooks) => {
+  try {
+    const response = await axios.post(BASE_URL, initialbooks);
+    return response.data;
+  } catch (error) {
+    return error.message;
   }
 });
 
@@ -43,8 +51,11 @@ export const booksSlice = createSlice({
         });
       }).addCase(fetchBooks.rejected, (state, action) => ({
         ...state,
-        status: 'loading',
+        status: 'failed',
         error: [...state.error, action.error.message],
+      })).addCase(postBooks.fulfilled, (state, action) => ({
+        ...state,
+        status: action.payload,
       }));
   },
 

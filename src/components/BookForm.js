@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { addBook } from '../redux/books/booksSlice';
+import { postBooks } from '../redux/books/booksSlice';
 
 function BookForm() {
   const [title, setTitle] = useState('');
@@ -18,7 +18,7 @@ function BookForm() {
         author,
         category,
       };
-      dispath(addBook(book));
+      dispath(postBooks(book)).unwrap();
       setTitle('');
       setAutor('');
     }

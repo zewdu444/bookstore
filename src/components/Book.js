@@ -10,7 +10,10 @@ function Book() {
   const [selected, setSelected] = useState();
   const dispatch = useDispatch();
   useEffect(() => {
+    console.log(status);
     if (status === 'idle') {
+      dispatch(fetchBooks());
+    } else if (status === 'Created') {
       dispatch(fetchBooks());
     }
   }, [status, dispatch]);
