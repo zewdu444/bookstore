@@ -28,23 +28,24 @@
 
 # 📖 Book Store CMS <a name="about-project"></a>
 
-<p> this repository is React Redux single page application used to create, remove and display books.</p>
+<p> this repository is React Redux single page application used to create, remove and display books from external API</p>
 
 ## 🛠 Built With <a name="built-with"> </a>
 
-> HTML 5 , css3, javascript ES6, React and Redux
+> HTML 5 , css3, javascript ES6, External API and React/Redux
 
 ### Tech Stack <a name="tech-stack"></a>
 
-> React, Redux, webpack And babel
+> React, Redux, webpack , babel and Axios
 
 ### Key Features <a name="key-features"></a>
 
-  <li>Display books</li>
+  <li>Fetch books</li>
   <li>Navigation to different pages</li>
   <li>Redux toolkit</li>
+  <li>Axios library</li>
   <li>Filter option by category</li>
-  <li>Add and remove books</li>
+  <li>Post and remove books</li>
 <p align="right">(<a href="#readme-top">back to top</a>)</p><!-- LIVE DEMO -->
 
 ## 🚀 Live Demo <a name="live-demo"></a>
@@ -98,7 +99,7 @@ To run the project, execute the following command:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-> Use External API libraries
+> Styling UI
 
 ## 🤝 Contributing <a name="contributing"></a>
 
