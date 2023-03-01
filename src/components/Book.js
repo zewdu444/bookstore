@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import BookForm from './BookForm';
-import { removeBook, fetchBooks } from '../redux/books/booksSlice';
+import { deleteBooks, fetchBooks } from '../redux/books/booksSlice';
 
 function Book() {
   const bookstore = useSelector((state) => state.books.bookstore);
@@ -10,10 +10,10 @@ function Book() {
   const [selected, setSelected] = useState();
   const dispatch = useDispatch();
   useEffect(() => {
-    console.log(status);
     if (status === 'idle') {
       dispatch(fetchBooks());
-    } else if (status === 'Created') {
+    }
+    if (status === 'succeeded') {
       dispatch(fetchBooks());
     }
   }, [status, dispatch]);
@@ -62,7 +62,7 @@ function Book() {
                 <p />
                 <button
                   id={book.id}
-                  onClick={() => dispatch(removeBook(book.id))}
+                  onClick={() => dispatch(deleteBooks(book.id))}
                   type="button"
                 >
                   Remove
@@ -85,7 +85,7 @@ function Book() {
                 <p />
                 <button
                   id={book.id}
-                  onClick={() => dispatch(removeBook(book.id))}
+                  onClick={() => dispatch(deleteBooks(book.id))}
                   type="button"
                 >
                   Remove
@@ -107,7 +107,7 @@ function Book() {
                 <p />
                 <button
                   id={book.id}
-                  onClick={() => dispatch(removeBook(book.id))}
+                  onClick={() => dispatch(deleteBooks(book.id))}
                   type="button"
                 >
                   Remove
