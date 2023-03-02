@@ -34,7 +34,7 @@ function Categories() {
       {
       show ? (<p />) : (
         <div className="mt-4">
-          <Fieldset legend="Under Construction">
+          <Fieldset legend="Under Construction" toggleable>
             {
           categories.map((category) => (
             <p key={category.id} className="m-0">

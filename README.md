@@ -46,6 +46,7 @@
   <li>Axios library</li>
   <li>Filter option by category</li>
   <li>Post and remove books</li>
+  <li>Styling UI</li>
 <p align="right">(<a href="#readme-top">back to top</a>)</p><!-- LIVE DEMO -->
 
 ## 🚀 Live Demo <a name="live-demo"></a>
@@ -99,7 +100,7 @@ To run the project, execute the following command:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-> Styling UI
+> Improve Filter option
 
 ## 🤝 Contributing <a name="contributing"></a>
 
