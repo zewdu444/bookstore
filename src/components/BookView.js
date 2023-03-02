@@ -25,7 +25,7 @@ export default function BookView() {
   const bookDisplay = (bookstore) => (
     <card className="col-12 sm:col-12 lg:col-12 xl:col-12 p-2 surface-200">
       <div className="p-4 border-2 surface-border surface-card border-round">
-        <div className=" flex flex-column sm:flex-row align-items-center xl:align-items-start flex-1 gap-4">
+        <div className="flex flex-column sm:flex-row align-items-center xl:align-items-start flex-1 gap-4">
           <div className="flex flex-column w-5  align-items-center sm:align-items-start">
             <div className="text-1xl text-600">{bookstore.category}</div>
             <div className="text-2xl font-bold text-900 pb-2">{bookstore.title}</div>
