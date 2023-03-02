@@ -1,0 +1,6 @@
+.p-dataview .p-dataview-content {
+  background: var(--surface-200) !important;
+  color: #495057;
+  border: 0 none;
+  padding: 0;
+}
