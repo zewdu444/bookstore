@@ -39,8 +39,8 @@ function BookForm() {
       <div className="flex text-2xl pb-2 pt-2 flex-column sm:flex-row align-items-center xl:align-items-start flex-1 gap-4">
         <div>ADD NEW BOOK</div>
       </div>
-      <form className="flex flex-column sm:flex-row align-items-center xl:align-items-start flex-none gap-4">
-        <div className="flex flex-column sm:flex-row xl:w-5">
+      <div className="flex flex-column sm:flex-row align-items-center xl:align-items-start flex-none gap-4">
+        <div className="flex flex-column sm:flex-row xl:w-6 flex-grow-1">
           <span className="p-input-icon-left w-12 md:w-12 sm:w-12">
             <i className="pi pi-book" />
             <InputText
@@ -53,8 +53,8 @@ function BookForm() {
             />
           </span>
         </div>
-        <div className="flex flex-column sm:flex-row w-auto gap-3">
-          <span className="p-input-icon-left">
+        <div className="flex flex-column sm:flex-row w-12 gap-3 ">
+          <span className="p-input-icon-left w-3 flex-grow-1">
             <i className="pi pi-user" />
             <InputText
               placeholder="Author"
@@ -62,24 +62,27 @@ function BookForm() {
               type="text"
               value={author}
               onChange={(e) => setAutor(e.target.value)}
+              className="w-12 flex-grow-1"
             />
           </span>
           <Dropdown
             value={category}
             onChange={(e) => setCategory(e.target.value)}
             placeholder="Select Type"
-            className="lg:w-14rem md:w-14rem"
+            className="lg:w-14rem md:w-14rem "
             options={categories}
             optionLabel="category"
           />
-          <Button
-            onClick={addBookHandler}
-            className="bg-blue-500 text-xs  align-self-end "
-            label="ADD BOOK"
-            size="lg"
-          />
+          <div className="flex-grow-1 flex align-items-center w-1">
+            <Button
+              onClick={addBookHandler}
+              className="bg-blue-500 text-xs  flex-grow-1 flex align-items-center"
+              label="ADD BOOK"
+              size="lg"
+            />
+          </div>
         </div>
-      </form>
+      </div>
 
     </div>
   );
