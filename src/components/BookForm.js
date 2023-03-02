@@ -25,7 +25,7 @@ function BookForm() {
   };
 
   return (
-    <div>
+    <div className="card">
       <form>
         <label htmlFor="Title">
           Title
