@@ -40,7 +40,7 @@ function BookForm() {
         <div>ADD NEW BOOK</div>
       </div>
       <div className="flex flex-column sm:flex-row align-items-center xl:align-items-start flex-none gap-4">
-        <div className="flex flex-column sm:flex-row xl:w-6 flex-grow-1">
+        <div className="flex flex-column sm:flex-row lg:w-7 flex-grow-1">
           <span className="p-input-icon-left w-12 md:w-12 sm:w-12">
             <i className="pi pi-book" />
             <InputText
@@ -53,8 +53,8 @@ function BookForm() {
             />
           </span>
         </div>
-        <div className="flex flex-column sm:flex-row w-12 gap-3 ">
-          <span className="p-input-icon-left w-3 flex-grow-1">
+        <div className="flex flex-column sm:flex-row w-8 gap-3 align-items-center">
+          <span className="p-input-icon-left lg:w-3 lg:flex-grow-1 ">
             <i className="pi pi-user" />
             <InputText
               placeholder="Author"
@@ -62,21 +62,23 @@ function BookForm() {
               type="text"
               value={author}
               onChange={(e) => setAutor(e.target.value)}
-              className="w-12 flex-grow-1"
+              className="w-12 flex-grow-1 "
             />
           </span>
+
           <Dropdown
             value={category}
             onChange={(e) => setCategory(e.target.value)}
             placeholder="Select Type"
-            className="lg:w-14rem md:w-14rem "
+            className="lg:flex-grow-1 w-15rem"
             options={categories}
             optionLabel="category"
           />
-          <div className="flex-grow-1 flex align-items-center w-1">
+
+          <div className="flex lg:flex-column sm:flex-row lg:w-1 lg:flex-grow-1 md:flex-grow-1 justify-content-center">
             <Button
               onClick={addBookHandler}
-              className="bg-blue-500 text-xs  flex-grow-1 flex align-items-center"
+              className="bg-blue-500 text-xs lg:flex-grow-1 sm:flex-grow-0 "
               label="ADD BOOK"
               size="lg"
             />

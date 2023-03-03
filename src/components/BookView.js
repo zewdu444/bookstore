@@ -12,8 +12,6 @@ export default function BookView() {
   const bookstore = useSelector((state) => state.books.bookstore);
   const status = useSelector((state) => state.books.status);
   const [value, setValue] = useState(Math.floor(Math.random() * 100));
-  // const categories = useSelector((state) => state.category.categories);
-  // const [selected, setSelected] = useState();
   const dispatch = useDispatch();
   useEffect(() => {
     if (status === 'idle') {
@@ -78,7 +76,7 @@ export default function BookView() {
 
   );
   return (
-    <div>
+    <div className="ml-1 mr-1 lg:ml-0 lg:mr-0">
       <DataView
         value={bookstore}
         itemTemplate={bookDisplay}

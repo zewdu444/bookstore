@@ -25,18 +25,30 @@ function Navbar() {
 
   ];
   const end = (
-    <Button
-      icon="pi pi-user"
-      rounded
-      outlined
-      severity="info"
-      aria-label="User"
-    />
+    <div>
+      <NavLink
+        to="/"
+        className="text-3xl  xl:hidden md:hidden lg:hidden sm:inline text-blue-500 mr-7"
+        style={{
+          textDecoration: 'none',
+        }}
+      >
+        Bookstore CMS
+      </NavLink>
+      <Button
+        icon="pi pi-user"
+        rounded
+        outlined
+        severity="info"
+        aria-label="User"
+      />
+
+    </div>
   );
   const start = (
     <NavLink
       to="/"
-      className="text-3xl hidden text-blue-500 xl:block pr-4"
+      className="text-3xl hidden text-blue-500 xl:block md:hidden pr-4 sm:justify-content-center"
       style={{
         textDecoration: 'none',
       }}
